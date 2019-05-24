@@ -1,7 +1,8 @@
-package work.inabajun.trelog
+package work.inabajun.trelog.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import work.inabajun.trelog.R
 
 class MainActivity : AppCompatActivity() {
 
