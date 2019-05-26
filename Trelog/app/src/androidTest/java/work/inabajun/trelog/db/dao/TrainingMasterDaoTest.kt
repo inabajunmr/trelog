@@ -8,7 +8,7 @@ import work.inabajun.trelog.db.AppDatabase
 
 
 @RunWith(AndroidJUnit4::class)
-class TrainingMasterDaoTest {
+class TrainingMasterDaoTest() {
 
     @Test
     fun testInsertTrainingMasterEntity() {
@@ -21,6 +21,8 @@ class TrainingMasterDaoTest {
         var entity = TrainingMasterEntity(1, "name", "type")
         sut.insertTrainingMasterEntity(entity)
 
+        var loadTrainingMaster = sut.loadTrainingMaster(entity.id)
+        print(loadTrainingMaster.toString())
     }
-}
 
+}
