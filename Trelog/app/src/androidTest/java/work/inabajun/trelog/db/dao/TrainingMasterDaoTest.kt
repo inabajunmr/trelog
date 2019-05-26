@@ -4,6 +4,7 @@ import android.support.test.runner.AndroidJUnit4
 import org.junit.runner.RunWith
 import android.support.test.InstrumentationRegistry
 import org.junit.Test
+import org.junit.Assert.*
 import work.inabajun.trelog.db.AppDatabase
 
 
@@ -21,8 +22,10 @@ class TrainingMasterDaoTest() {
         var entity = TrainingMasterEntity(1, "name", "type")
         sut.insertTrainingMasterEntity(entity)
 
-        var loadTrainingMaster = sut.loadTrainingMaster(entity.id)
-        print(loadTrainingMaster.toString())
-    }
+        // exercise
+        var actual = sut.loadTrainingMaster(entity.id)
 
+        // verify
+        assertEquals(actual, entity)
+    }
 }
