@@ -19,7 +19,7 @@ class TrainingMasterDaoTest() {
         var sut = db.trainingMasterDao()
 
         // exercise
-        var entity = TrainingMasterEntity(1, "name", "type")
+        var entity = TrainingMasterEntity(1, "name", TrainingUnitType.COUNT, TrainingPart.AEROBIC)
         sut.insertTrainingMasterEntity(entity)
 
         // exercise
